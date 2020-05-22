@@ -7,7 +7,8 @@
         <div class="name">Goofer</div>
         <div class="bio">{{data.bio.content[0].content[0].value}}</div>
         <div class="social-links">
-          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:00ka0j0W9lE9iO3obHwOxd&size=basic&theme=dark&show-count=0" width="92" height="26" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:00ka0j0W9lE9iO3obHwOxd&size=basicl&theme=light&show-count=0" width="92" height="26" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+          <a href="https://open.spotify.com/artist/00ka0j0W9lE9iO3obHwOxd"></a>
         </div>
         <div class="social-icons">
           <a class="social-icon-item" :href="data.youtubeurl"><img src="../assets/youtube.svg" alt=""> </a>
@@ -99,6 +100,14 @@ export default {
       .social-links
         text-align: center
         margin-bottom: 10px
+        position: relative
+
+        & > a
+          position: absolute
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
 
       .social-icons
         text-align: center
