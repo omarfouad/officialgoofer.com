@@ -37,6 +37,7 @@ export default {
 		}).then((entries) => {
 			this.headerData = entries.items[0].fields
 			this.headerReady = true
+			console.log(this.headerData)
 		})
 	},
 

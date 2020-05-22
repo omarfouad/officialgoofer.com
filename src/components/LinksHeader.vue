@@ -5,7 +5,7 @@
       <div class="avatar" :style="'background-image: url(' + data.avatar.fields.file.url + ')'"></div>
       <div class="profile-content">
         <div class="name">Goofer</div>
-        <div class="bio">{{data.bio.content[0].content[0].value}}</div>
+        <div class="bio" v-html="data.biotext"></div>
         <div class="social-links">
           <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:00ka0j0W9lE9iO3obHwOxd&size=basicl&theme=light&show-count=0" width="92" height="26" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
           <a href="https://open.spotify.com/artist/00ka0j0W9lE9iO3obHwOxd"></a>
@@ -27,7 +27,17 @@
 export default {
   name: "links-header",
   props: ['data'],
-  
+  computed: {
+    getBio() {
+      var chuncks = this.data.bio.content[0].content
+      var bio = ""
+      for (let i = 0; i < chuncks.length; i++) {
+        bio += chuncks[i].value
+        
+      }
+      return bio
+    }
+  }
 }
 </script>
 
