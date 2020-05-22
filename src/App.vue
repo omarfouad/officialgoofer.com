@@ -1,0 +1,29 @@
+<template>
+  <div id="app">
+    
+    <router-view/>
+  </div>
+</template>
+
+
+
+<style lang="sass">
+
+  html
+    font-family: 'Open Sans', sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+    color: rgba(white, 0.9)
+    font-size: 16px
+    font-weight: 400 // 600 and 700
+    background-color: #242424
+
+  *
+    margin: 0
+    padding: 0
+    box-sizing: content-box
+
+
+
+</style>
