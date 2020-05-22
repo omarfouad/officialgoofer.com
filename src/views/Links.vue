@@ -15,11 +15,17 @@
 
 <script>
 var contentful = require('contentful')
+var axios = require('axios')
+
 import Link from '../components/Link.vue'
 import LinksHeader from '../components/LinksHeader.vue'
+import Notifier from '../utils/Notifier.js'
 
 export default {
 	created() {
+		
+		Notifier("Links Page")
+
 		var client = contentful.createClient({
 			space: 'vi6hl46udqpd',
 			accessToken: 'wBpUPHueY1ncouzLSMTmYmH5cAcxHNlqb1ERBzrToDc'
@@ -37,7 +43,6 @@ export default {
 		}).then((entries) => {
 			this.headerData = entries.items[0].fields
 			this.headerReady = true
-			console.log(this.headerData)
 		})
 	},
 

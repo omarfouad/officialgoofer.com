@@ -1,5 +1,5 @@
 <template>
-  <a class="link-item" :href='data.fields.linkUrl'>
+  <a class="link-item" :href='data.fields.linkUrl' @click="onClick(data.fields.title)">
     <div class="link-wrapper">
       <div class="beacon" :id="'beacon_' + data.sys.id" ></div>
       <div class="artwork">
@@ -16,11 +16,14 @@
 
 <script>
 import FastAverageColor from 'fast-average-color'
-
+var Notifier = require('../utils/Notifier.js')
 export default {
   props: ['data'],
   
   methods: {
+		onClick(e) {
+			Notifier("Inner Link (" + e + ")")
+		},
 		onLoad(id){
 			let fac = new FastAverageColor()
 			let image = document.querySelector('#image_' + id)
