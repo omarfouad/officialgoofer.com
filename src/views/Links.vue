@@ -9,7 +9,7 @@
 			</template>
 		</div>
 
-		<div class="copyright">&copy 2020 Goofer - All Rights Reserved.</div>
+		<div class="copyright">&copy 2021 Goofer - All Rights Reserved.</div>
 	</div>
 </template>
 
